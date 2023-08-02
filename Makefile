@@ -15,7 +15,7 @@ SOURCES = $(addprefix $(SRCPATH)/, $(addsuffix .c, $(MODULES)))
 DBGOBJS = $(addprefix $(OBJPATH)/$(DBGOPRX), $(addsuffix .o, $(MODULES)))
 OPTOBJS = $(addprefix $(OBJPATH)/$(OPTOPRX), $(addsuffix .o, $(MODULES)))
 
-.PHONY: debug optimized clean
+.PHONY: debug optimized clean install
 
 $(OBJPATH)/$(DBGOPRX)%.o: $(SRCPATH)/%.c $(SRCPATH)/%.h
 	gcc -c $(DBGFLGS) $(LIBS) -o $@ $<
